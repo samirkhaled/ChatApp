@@ -77,6 +77,7 @@ public class MainChat extends AppCompatActivity {
          ViewpagerAdapter viewpagerAdapter=new ViewpagerAdapter(getSupportFragmentManager());
          viewpagerAdapter.addFragment(new CahtFragment(),"Chat");
          viewpagerAdapter.addFragment(new UsersFragment(),"Users");
+        viewpagerAdapter.addFragment(new ProfileFragment(),"Profile");
          viewPager.setAdapter(viewpagerAdapter);
          tabLayout.setupWithViewPager(viewPager);
     }

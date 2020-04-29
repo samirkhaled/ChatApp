@@ -2,13 +2,18 @@ package samir.com.chat_fire.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
@@ -44,6 +49,10 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder>{
         if(users1.getImage().equals("defualt"))
         {
            holder.profile_img.setImageResource(R.drawable.pp);
+        }else {
+
+          // Picasso.with(mContext).load(uri).into(holder.profile_img);
+            Glide.with(mContext).load(users1.getImage()).into(holder.profile_img);
         }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

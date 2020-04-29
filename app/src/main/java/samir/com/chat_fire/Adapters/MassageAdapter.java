@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
@@ -62,6 +63,8 @@ public class MassageAdapter extends RecyclerView.Adapter<MassageAdapter.ViewHold
             if(magUrl.equals("defualt"))
             {
                 holder.profile_img.setImageResource(R.drawable.pp);
+            }else {
+                Glide.with(mContext).load(magUrl).into(holder.profile_img);
             }
 
 

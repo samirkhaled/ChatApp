@@ -2,29 +2,18 @@ package samir.com.chat_fire.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
-import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
-
-import java.security.PrivateKey;
 import java.util.List;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 import samir.com.chat_fire.MasagesActivity;
 import samir.com.chat_fire.R;
 import samir.com.chat_fire.model.Users;
-
 public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder>{
     private Context mContext;
     List<Users> users;
@@ -64,8 +53,6 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder>{
 
             }
         });
-
-
     }
 
     @Override

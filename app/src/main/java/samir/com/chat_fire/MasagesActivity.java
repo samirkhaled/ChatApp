@@ -83,7 +83,6 @@ public class MasagesActivity extends AppCompatActivity {
                 readMassages(firebaseUser.getUid(),userId,users.getImage());
 
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
@@ -172,15 +171,15 @@ public class MasagesActivity extends AppCompatActivity {
               for(DataSnapshot snapshot:dataSnapshot.getChildren()){
                   Chat_msgs chats=snapshot.getValue(Chat_msgs.class);
                   if(chats.getReceiver().equals(senderid)&&chats.getSender().equals(recvid)||
-                  chats.getReceiver().equals(recvid)&&chats.getSender().equals(senderid)
-                  ){
-                     chat_msgs.add(chats);
-
-                  }
-                  massageAdapter=new MassageAdapter(MasagesActivity.this,chat_msgs,uri);
-                  recyclerView.setAdapter(massageAdapter);
+                      chats.getReceiver().equals(recvid)&&chats.getSender().equals(senderid)
+              ){
+                  chat_msgs.add(chats);
 
               }
+              massageAdapter=new MassageAdapter(MasagesActivity.this,chat_msgs,uri);
+              recyclerView.setAdapter(massageAdapter);
+
+          }
 
           }
 
@@ -189,7 +188,6 @@ public class MasagesActivity extends AppCompatActivity {
 
           }
       });
-
 
 
   }
